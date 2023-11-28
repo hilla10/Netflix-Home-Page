@@ -1,0 +1,248 @@
+:root {
+    --primary-color: rgb(229, 9, 20);
+    --secondary-color: rgb(35, 35, 35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Netflix Sans,
+        Helvetica Neue,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #ffff;
+}
+
+
+.header {
+    padding-bottom: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+.header::after {
+    content: '';
+    background: none;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.header .login {
+    position: relative;
+    width: 450px;
+    height: auto;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 100 !important;
+    margin-bottom: 80px;
+}
+
+.header .login .container {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.header-top a {
+    background: none !important;
+}
+
+.header-top a:hover {
+    background: none !important;
+}
+
+
+.header .login .text-lg {
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+.header .login .form {
+    width: 100%;
+}
+
+.header-top .logo img {
+    width: 12rem !important;
+    height: 3.5rem !important;
+}
+
+.header form input {
+    width: 85%;
+    margin: 15px auto;
+    border: none;
+    background: var(--secondary-color);
+    font-size: 15px;
+}
+
+.header form .btn {
+    font-size: 1rem;
+    width: 85%;
+    padding: 1rem 0.754rem;
+}
+
+.header form input:focus {
+    outline: none;
+}
+
+form input[type="email"]:focus {
+    border: none;
+}
+
+.header form input::placeholder {
+    font-size: 15px;
+}
+
+.header .login .flex {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-top: -150px;
+    font-size: 14px;
+
+}
+
+.header .login .flex form {
+    display: flex;
+    align-items: center;
+}
+
+.header .login .flex form span {
+    min-width: 120px;
+}
+
+.header .login .flex input[type="checkbox"] {
+    background-color: #737373;
+    width: 20px;
+    height: 20px;
+}
+
+.header .login .text {
+    padding: 40px 0 150px 0;
+}
+
+.header .login .text-sm {
+    text-align: start;
+    color: #737373;
+    font-size: 1rem;
+    padding-left: 25px;
+
+}
+
+.header .login .text-xsm {
+    text-align: start;
+    font-size: 0.9rem;
+    color: #737373;
+    padding-left: 25px;
+    margin-right: 50px;
+}
+
+.header .login .text-xsm a {
+    color: steelblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.questions {
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-bottom: -30px;
+    padding: 30px 0 50px;
+    border-top: 1px solid #fff;
+}
+
+.questions .questions-content ul {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 740px) {
+    .header {
+        background: #000;
+    }
+
+    .header .login .container {
+        max-width: 90% !important;
+        margin: 0 auto;
+    }
+
+    .header .login {
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
+
+    .header form .btn,
+    .header form input {
+        width: 100%;
+    }
+
+    .header form .btn {
+        margin-top: 30px;
+    }
+
+    .header .login .text-xsm,
+    .header .login .text-sm {
+        margin-left: -25px;
+    }
+}
+
+@media (max-width: 964px) {
+    .header .login .flex {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(max-width: 500px) {
+    .questions .questions-content ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .questions .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .header-top .logo img {
+        width: 75px !important;
+        height: 20px !important;
+        margin-top: -10px;
+    }
+}
+
+@media(max-width: 225px) {
+    .questions .questions-content ul {
+        grid-template-columns: 1fr;
+    }
+}
